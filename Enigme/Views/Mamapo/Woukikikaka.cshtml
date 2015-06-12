@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Woukikikaka";
+}
+
+<h2>Félicication !</h2>
+
+<p>C'était pas trop compliqué ? </p>
+
+<p>Go à la page suivante</p>
+
+
+<script type="text/javascript">
+    function callMeMaybe() {
+        $.post(
+            window.location.origin + "/Mamapo/Woukikikaka",
+            {
+                email: "ok"
+            },
+            function () {
+            }
+        )
+        .done(function (result) {
+                console.log('YEAY ! \o/');
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+
+            console.log(jqXHR);
+            console.log(textStatus);
+            console.log(errorThrown);
+        })
+        .always(function () {
+        });
+    }
+</script>

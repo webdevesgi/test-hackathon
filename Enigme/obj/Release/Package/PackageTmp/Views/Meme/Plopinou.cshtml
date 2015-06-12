@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Plopinou";
+}
+
+<h2>Plopinou est content de toi. Ce n'est pas encore fini</h2>
+
+<p>La nouvelle épreuve est ici, pas de lien pour le moment.</p>
+
+<script type="text/javascript">
+    function callMeMaybe() {
+        $.post(
+            window.location.origin + "/Meme/Plopinou",
+            {
+                email: "ok"
+            },
+            function () {
+            }
+        )
+        .done(function (result) {
+            if (result.result) {
+                console.log(result.result + ' YEAY ! \o/');
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+
+            console.log(jqXHR);
+            console.log(textStatus);
+            console.log(errorThrown);
+        })
+        .always(function () {
+        });
+    }
+</script>
